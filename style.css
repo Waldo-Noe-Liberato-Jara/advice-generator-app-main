@@ -38,6 +38,7 @@ body {
   background-color: var(--background);
   display: grid;
   place-content: center;
+  position: relative;
 }
 
 .advice {
@@ -93,11 +94,17 @@ body {
   display: grid;
   place-content: center;
   justify-self: center;
+  box-shadow: 0px 0px 0px 0px transparent;
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.advice__btn:hover {
+  box-shadow: 0px 0px 8px 3px var(--button);
 }
 
 @media (max-width: 375px) {
   .advice {
-    width: 18rem;
+    max-width: 18rem;
     gap: 1.5rem;
     padding: 1.25rem 1.25rem 2.75rem 1.25rem;
     border-radius: .75rem;
